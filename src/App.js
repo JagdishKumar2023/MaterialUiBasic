@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import { ButtonMui } from "./components/ButtonMui";
+// import { TypographyMui } from "./components/TypographyMui";
+// import { TextFieldMui } from "./components/TextFieldMui";
+import { FormMuiBasic } from "./components/FormMuiBasic";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <TypographyMui /> */}
+      {/* <ButtonMui /> */}
+      {/* <TextFieldMui /> */}
+      <FormMuiBasic />
     </div>
   );
 }

@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.textContainer {
+  margin-top: 20px;
+  /* border: 2px solid red; */
+}
+
+.formContainer {
+  margin: 20px;
+}
+
+.submitBtn {
+  align-items: center;
+  margin-top: 10px;
+}
