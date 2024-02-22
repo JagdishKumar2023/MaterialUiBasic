@@ -1,5 +1,15 @@
 import React, { useState } from "react";
-import { TextField, Button } from "@mui/material";
+import {
+  TextField,
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  FormGroup,
+  FormControlLabel,
+} from "@mui/material";
+import { CheckBox } from "@mui/icons-material";
 
 export const FormMuiBasic = () => {
   const [inputValue, setInputValue] = useState({
@@ -7,6 +17,8 @@ export const FormMuiBasic = () => {
     email: "",
     password: "",
     gender: "",
+    courses: "",
+    terms: false,
   });
 
   const handleChange = (e) => {
@@ -59,6 +71,39 @@ export const FormMuiBasic = () => {
           onChange={handleChange}
           name="gender"
         />
+
+        <FormControl sx={{ width: 110 }}>
+          <InputLabel id="menu">Courses</InputLabel>
+          <Select
+            labelId="menu"
+            id="menuList"
+            label="courses"
+            value={inputValue.menu}
+            onChange={handleChange}
+          >
+            <MenuItem value={"mongodb"}>Mongodb</MenuItem>
+            <MenuItem value={"express"}>Express</MenuItem>
+            <MenuItem value={"node"}>Node</MenuItem>
+            <MenuItem value={"react"}>React</MenuItem>
+          </Select>
+        </FormControl>
+
+        <FormGroup sx={{ margin: "20" }}>
+          <FormControlLabel
+            label="I Agree T&C"
+            control={
+              <CheckBox
+                onChange={() =>
+                  setInputValue((prevState) => ({
+                    ...prevState,
+                    terms: !inputValue.terms,
+                  }))
+                }
+              />
+            }
+          ></FormControlLabel>
+        </FormGroup>
+
         <Button className="submitBtn" variant="text" type="submit">
           Submit
         </Button>
