@@ -8,17 +8,20 @@ import {
   Select,
   FormGroup,
   FormControlLabel,
+  Checkbox,
+  FormLabel,
+  RadioGroup,
+  Radio,
 } from "@mui/material";
-import { CheckBox } from "@mui/icons-material";
 
 export const FormMuiBasic = () => {
   const [inputValue, setInputValue] = useState({
     name: "",
     email: "",
     password: "",
-    gender: "",
     courses: "",
     terms: false,
+    gender: "",
   });
 
   const handleChange = (e) => {
@@ -35,7 +38,8 @@ export const FormMuiBasic = () => {
   };
 
   return (
-    <div className="formContainer">
+    <div className="mainFormContainer">
+      <h1 style={{ color: "blue" }}>FORM FOR MATERIAL UI</h1>
       <form onSubmit={handleSubmit}>
         <TextField
           value={inputValue.name}
@@ -66,8 +70,8 @@ export const FormMuiBasic = () => {
 
         <TextField
           value={inputValue.gender}
-          variant="outlined"
-          label="enter you gender"
+          varient="outlined"
+          label="enter gender"
           type="gender"
           onChange={handleChange}
           name="gender"
@@ -76,10 +80,10 @@ export const FormMuiBasic = () => {
         <FormControl sx={{ width: 110 }}>
           <InputLabel id="menu">Courses</InputLabel>
           <Select
+            value={inputValue.courses}
             labelId="menu"
             id="menuList"
             label="courses"
-            value={inputValue.courses}
             onChange={handleChange}
             name="courses"
           >
@@ -90,11 +94,11 @@ export const FormMuiBasic = () => {
           </Select>
         </FormControl>
 
-        <FormGroup sx={{ margin: "20" }}>
+        <FormGroup className="CheackBox" sx={{ margin: "20" }}>
           <FormControlLabel
             label="I Agree T&C"
             control={
-              <CheckBox
+              <Checkbox
                 onChange={() =>
                   setInputValue((prevState) => ({
                     ...prevState,

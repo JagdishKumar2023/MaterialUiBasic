@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -37,16 +43,25 @@
   }
 }
 
-.textContainer {
-  margin-top: 20px;
-  /* border: 2px solid red; */
+.mainFormContainer {
+  background-color: #70fb61;
+  height: 700px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
 }
 
-.formContainer {
-  margin: 20px;
+form {
+  margin-top: 30px;
 }
 
 .submitBtn {
   align-items: center;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+.CheackBox {
+  display: flex;
+  align-items: center;
+  margin: 20px;
 }
