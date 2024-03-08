@@ -30,6 +30,7 @@ export const FormMuiBasic = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setInputValue("");
     console.log(inputValue);
   };
 
@@ -78,8 +79,9 @@ export const FormMuiBasic = () => {
             labelId="menu"
             id="menuList"
             label="courses"
-            value={inputValue.menu}
+            value={inputValue.courses}
             onChange={handleChange}
+            name="courses"
           >
             <MenuItem value={"mongodb"}>Mongodb</MenuItem>
             <MenuItem value={"express"}>Express</MenuItem>
@@ -101,8 +103,9 @@ export const FormMuiBasic = () => {
                 }
               />
             }
-          ></FormControlLabel>
+          />
         </FormGroup>
+        <br />
 
         <Button className="submitBtn" variant="text" type="submit">
           Submit

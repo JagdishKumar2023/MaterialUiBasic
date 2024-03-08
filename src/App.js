@@ -1,10 +1,10 @@
 import "./App.css";
-import { CardImg } from "./components/CardImg";
+import { FormMuiBasic } from "./components/FormMuiBasic";
 
 function App() {
   return (
     <div className="App">
-      <CardImg />
+      <FormMuiBasic />
     </div>
   );
 }
