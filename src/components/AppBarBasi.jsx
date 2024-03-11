@@ -1,11 +1,13 @@
-import { Typography, AppBar, Toolbar, Tab, Tabs } from "@mui/material";
+import { Typography, AppBar, Toolbar, Tab, Tabs, Box } from "@mui/material";
 import { useState } from "react";
+import { Modals } from "./Modals";
+// import { CardImg } from "./CardImg";
 
 export const AppBarBasi = () => {
   const [value, setValue] = useState(0);
 
   return (
-    <div className="App">
+    <Box className="App">
       <AppBar>
         <Toolbar>
           <Typography variant="h4">Navbar</Typography>
@@ -22,6 +24,11 @@ export const AppBarBasi = () => {
           </Tabs>
         </Toolbar>
       </AppBar>
-    </div>
+      <div style={{ marginTop: 100 }}>
+        <Modals />
+      </div>
+
+      {/* <CardImg /> */}
+    </Box>
   );
 };
